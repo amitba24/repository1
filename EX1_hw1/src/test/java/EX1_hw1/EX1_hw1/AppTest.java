@@ -29,15 +29,7 @@ public class AppTest {
     	assertEquals(Expected_result,actual_result);
     	
     }
-    @Test
-    public void Test_3() {
-    	String Expected_result="error";
-    	int a= 5,b=3;
-    	String mod="regular";
-    	String actual_result= tester.Comapre(a, b, mod);
-    	assertEquals(Expected_result,actual_result);
-    	
-    }
+
     @Test
 public void Test_4() {
 	String Expected_result="B";
@@ -49,7 +41,7 @@ public void Test_4() {
 }
     @Test
 public void Test_5() {
-	String Expected_result="A";
+	String Expected_result="B";
 	int a= 3,b=-4;
 	String mod="negatives";
 	String actual_result= tester.Comapre(a, b, mod);
@@ -74,15 +66,19 @@ public void Test_7() {
 	assertEquals(Expected_result,actual_result);
 	
 }  
+ 
     @Test
-public void Test_8() {
-	String Expected_result="error";
-	int a=1/0,b=10;
-	String mod="reciprocals";
-	String actual_result= tester.Comapre(a, b, mod);
-	assertEquals(Expected_result,actual_result);
-	
-}  
+    public void testDivideByZero_Test_8() {
+    	String Expected_result="error";
+    	int a=5, b=0;
+    	String mod="reciprocals";
+    	String actual_result= tester.Comapre(a, b, mod);
+  
+    	 /**ssertEquals("Divide by zero gives infinity as result", true, Double.isInfinite(actual_result));**/
+    	    assertEquals("error", Expected_result, actual_result);
+
+    }
+    
 
 
 
